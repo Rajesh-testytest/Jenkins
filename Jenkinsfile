@@ -1,6 +1,5 @@
 pipeline {
     agent any
-     {
         stages {
            stage ('success/failure') {
                when {
@@ -11,7 +10,6 @@ pipeline {
             }
         }
      }
-  }
     post{
         failure{
             emailext(
