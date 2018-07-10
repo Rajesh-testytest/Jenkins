@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('success/failure') {
             when {
-                branch 'development'
+                branch 'master'
                 }
             steps {
                 echo "Hello, Rajesh!"
