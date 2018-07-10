@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('success/failure') {
             steps{
-                echo ${BRANCH_NAME}
+                echo ${env.BRANCH_NAME}
             }
             
         }
