@@ -19,5 +19,14 @@ pipeline {
          )
         }
     }
+    post{
+        success{
+            emailext(
+                subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Success",
+                body:"""<p> "${env.JOB_NAME} [${env.BUILD_NUMBER}] Success" </p> """,
+                to: "rajeshayaldasani.cse18@gmail.com"
+         )
+        }
+    }
 }
 
