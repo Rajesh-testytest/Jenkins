@@ -2,9 +2,11 @@ pipeline {
     agent any
     stages {
         stage ('success/failure') {
-            steps{
-                echo env.GIT_BRANCH
-                
+            when {
+                expression { env.GIT_BRANCH == origin/master
+            }
+            steps {
+                echo "Hello, Rajesh"
             }
         }
     }
