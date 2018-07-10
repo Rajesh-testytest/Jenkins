@@ -1,15 +1,17 @@
 pipeline {
     agent any
      {
-        stage ('success/failure') {
-          stages  when {
-                expression { env.GIT_BRANCH == 'origin/development' }
-            }
+        stages {
+           stage ('success/failure') {
+               when {
+                    expression { env.GIT_BRANCH == 'origin/development' }
+                    }
             steps {
                 echo 'hello'
             }
         }
      }
+  }
     post{
         failure{
             emailext(
