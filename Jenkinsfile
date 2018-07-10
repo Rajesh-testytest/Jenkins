@@ -19,7 +19,6 @@ pipeline {
          )
         }
     }
-    post{
         success{
             emailext(
                 subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Success",
@@ -28,5 +27,5 @@ pipeline {
          )
         }
     }
-}
+
 
