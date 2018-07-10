@@ -2,12 +2,12 @@ pipeline {
     agent any
     stages {
         stage ('success/failure') {
-            when {
+//            when {
 //                expression {env.GIT_BRANCH == 'origin/development'}
-                branch 'origin/master'
-            }
+//                branch 'origin/master'
+//            }
             steps {
-                echo "Hello, Rajesh"
+                sh git branch -a
             }
         }
     }
