@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage ('success/failure') {
             when {
-//                expression {env.GIT_BRANCH == 'origin/development'}
-                branch 'remotes/origin/master'
+                expression {env.GIT_BRANCH == 'origin/development'}
             }
             steps {
                 echo 'hello'
