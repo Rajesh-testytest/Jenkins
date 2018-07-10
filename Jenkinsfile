@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('success/failure') {
             steps{
-                print $GIT_BRANCH
+                echo env.GIT_BRANCH
                 
             }
         }
