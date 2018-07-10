@@ -5,12 +5,7 @@ pipeline {
             steps{
                 echo $GIT_BRANCH
             }
-            when {
-                branch 'master'
-            }
-            steps {
-                echo "Hello, Rajesh!"
-            }
+            
         }
     }
 }
