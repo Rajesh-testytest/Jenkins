@@ -10,13 +10,11 @@ pipeline {
             }
         }
      }
-    post
-    {
-        failure
-        {
-            emailext (
-                subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Failed" 
-                body:"""<p> "${env.JOB_NAME} [${env.BUILD_NUMBER}] Failed" </p> """
+    post{
+        failure{
+            emailext(
+                subject: "${env.JOB_NAME} [${env.BUILD_NUMBER}] Failed",
+                body:"""<p> "${env.JOB_NAME} [${env.BUILD_NUMBER}] Failed" </p> """,
                 to: "rajeshayaldasani.cse18@gmail.com"
          )
         }
