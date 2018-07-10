@@ -7,7 +7,7 @@ pipeline {
 //                branch 'origin/master'
 //            }
             steps {
-                sh git branch -a
+                sh 'git branch -a'
             }
         }
     }
