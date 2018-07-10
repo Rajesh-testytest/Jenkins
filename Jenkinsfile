@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('success/failure') {
             steps{
-                sh 'printenv'
+                echo ${GIT_BRANCH}
             }
         }
     }
