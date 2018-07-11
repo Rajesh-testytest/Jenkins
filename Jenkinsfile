@@ -6,11 +6,11 @@ pipeline {
                    expression { env.GIT_BRANCH == 'origin/development' }
                     }
             steps {
-                   sh 'printenv'
-                //                  echo env.GIT_PREVIOUS_COMMIT
+
+ //                  echo env.GIT_PREVIOUS_COMMIT
  //                  echo env.GIT_COMMIT
  //                  sh 'git status'
- //                  sh 'git log $GIT_PREVIOUS_COMMIT..$GIT_COMMIT --pretty=format:%an/%ae'
+                   sh 'git log $GIT_PREVIOUS_COMMIT..$GIT_COMMIT --pretty=format:%an'
             }
         }
      }
