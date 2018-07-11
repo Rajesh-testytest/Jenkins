@@ -9,7 +9,8 @@ pipeline {
                    echo env.GIT_PREVIOUS_COMMIT
                    echo env.GIT_COMMIT
  //                  sh 'git status'
-                   sh 'git log env.GIT_PREVIOUS_COMMIT..env.GIT_COMMIT --pretty=format:%an/%ae'
+                   sh 'git log env.GIT_PREVIOUS_COMMIT..env.GIT_COMMIT 
+                // --pretty=format:%an/%ae'
             }
         }
      }
