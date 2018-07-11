@@ -6,7 +6,7 @@ pipeline {
                    expression { env.GIT_BRANCH == 'origin/development' }
                     }
             steps {
-                echo printenv
+                   printenv
                 //                  echo env.GIT_PREVIOUS_COMMIT
  //                  echo env.GIT_COMMIT
  //                  sh 'git status'
