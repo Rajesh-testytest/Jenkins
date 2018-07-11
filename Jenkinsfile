@@ -2,10 +2,11 @@ pipeline {
     agent any
         stages {
            stage ('success/failure') {
-//               when {
-//                    expression { env.GIT_BRANCH == 'origin/development' }
-//                    }
+               when {
+                   expression { env.GIT_BRANCH == 'origin/development' }
+                    }
             steps {
+
                 git log $GIT_PREVIOUS_COMMIT..$GIT_COMMIT --pretty=format:%an/%ae
             }
         }
