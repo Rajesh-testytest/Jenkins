@@ -8,7 +8,8 @@ pipeline {
             steps {
                    echo env.GIT_PREVIOUS_COMMIT
                    echo env.GIT_COMMIT
-                   git log 
+                   git log
+                //                  git log 
 //                git log env.GIT_PREVIOUS_COMMIT..env.GIT_COMMIT --pretty=format:%an/%ae
             }
         }
