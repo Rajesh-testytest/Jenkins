@@ -6,7 +6,7 @@ pipeline {
                 expression {env.GIT_BRANCH == 'origin/development'}
             }
             steps {
-                echo 'hello'
+                echo 'hello world'
             }
         }
     }
